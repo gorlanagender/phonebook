@@ -1,0 +1,14 @@
+<h1>Listing notes</h1>
+
+<table>
+  <tr>
+    <th>UserName</th>
+    <th>Phone Number</th>
+  </tr>
+    <td><%= @user.name %></td>
+     <td> <% @user.numbers.each do |number| %>
+	 <%= number.contact%></br>
+	<% end %> </td>
+  </tr>
+</table>
+<%= link_to 'Add a new number', new_number_path %>

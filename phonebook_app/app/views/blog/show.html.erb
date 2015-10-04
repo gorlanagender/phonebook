@@ -1,0 +1,14 @@
+<h1>Listing notes</h1>
+
+<table>
+  <tr>
+    <th>UserName</th>
+    <th>UserNote</th>
+  </tr>
+    <td><%= @user.name %></td>
+     <td> <% @user.notes.each do |note| %>
+	 <%= note.content%></br>
+	<% end %> </td>
+  </tr>
+</table>
+<%= link_to 'Add a new note', new_note_path %>
